@@ -48,6 +48,7 @@ public class CalSip {
         System.out.print("CalSip wurde beendet. Wir wünschen noch einen schönen Tag und bleiben Sie gesund.");
 
         scanner.close();
+    
     }
 
     public static int kalorieneingabe() {
@@ -59,8 +60,7 @@ public class CalSip {
         return ergebnis;
     }
 
-    public static double wasserbedarfProTag() {
-
+    public static void wasserbedarfProTag() {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Geben sie ihr Körpergewicht in Kilogramm ein: ");
         int körpergewichtInKilogramm = scanner.nextInt();
@@ -78,9 +78,10 @@ public class CalSip {
                                                                          // von der "Techniker Krankenkasse"
         // Berechnung erfolg mit Double, da mit Kommazahlen gearbeitet wird.
 
-        System.out.println("Der Wasserbedarf pro Tag (in Litern) beträgt für sie: ");
-        return wasserbedarfInLitern; // Rückgabewert des Wasserbedarfs in der Konsole mit vorherigem Statement zur
-                                     // Zuordnung
+        wasserbedarfInLitern = (int) (wasserbedarfInLitern * 100);
+        wasserbedarfInLitern = wasserbedarfInLitern / 100;
 
+        System.out.println("Der Wasserbedarf pro Tag (in Litern) beträgt für sie: " + wasserbedarfInLitern);
+        //Wasserbedarf wird ausgegeben.
     }
 }
