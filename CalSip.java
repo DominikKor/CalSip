@@ -1,8 +1,10 @@
 import java.util.Scanner;
 public class CalSip {
+    public static int kalorientagesgenze;
+    public static int nochFreieKalorien;
     public static void main(String[] args) {
-        int kalorientagesgenze;
-        int nochFreieKalorien;
+        
+        
         System.out.println("Hallo und Wilkommen bei CalSip!");
         Scanner scanner = new Scanner(System.in);
         String d = "D";
@@ -31,7 +33,12 @@ public class CalSip {
             }
             if (taste.equalsIgnoreCase(k)) {
             //Ruft die Mehtode auf in der man die zusich genommenen Kalorien eintragen kann und der noch freie Betrag zurückgegeben würd.
-                kaorieneingabe();
+                nochFreieKalorien = kalorieneingabe();
+                if (nochFreieKalorien <= 0) {
+                    System.out.println("Achtung! Sie haben ihr heutige Kalorihenhöchstgenze erreicht.");
+                } else {
+                    System.out.println("Sie dürfen noch " + nochFreieKalorien + "Kalorien zu sich nehmen. Befohr sie ihre heutige höstmenge erreichen.");
+                }
             }
             if (taste.equalsIgnoreCase(a)) {
                 abruch = true;
@@ -39,7 +46,10 @@ public class CalSip {
         }
         System.out.print("CalSip wurde bendet. Wir wünschen noch einen schönnen und bleiben sie gesund.");
     }
-    public static void kaorieneingabe() {
-
+    public static int kalorieneingabe() {
+        Scanner scanner = new Scanner(System.in);
+        int zusichgenommeneKalorien = Integer.parseInt(scanner.next());//"Integer.parseInt()" wandelt den String in ein int um.
+        int ergebnis = nochFreieKalorien - zusichgenommeneKalorien;
+        return ergebnis;
     }
 }
