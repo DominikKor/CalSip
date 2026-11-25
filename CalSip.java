@@ -6,7 +6,7 @@ public class CalSip {
 
     public static void main(String[] args) {
 
-        System.out.println("Hallo und Wilkommen bei CalSip!");
+        System.out.println("Hallo und Willkommen bei CalSip!");
         Scanner scanner = new Scanner(System.in);
         String d = "D";
         String k = "k";
@@ -14,37 +14,38 @@ public class CalSip {
         boolean abruch = false;
         while (!abruch) {
 
-            System.out.println("Was möchten sie tuhn?");
-            System.out.println(1 + ". Wollen sie ihre Körperdaten aender?");
-            System.out.println("Dann geben sie bitte D ein.");
+            System.out.println("Was möchten Sie tun?");
+            System.out.println(1 + ". Wollen Sie Ihre Körperdaten ändern?");
+            System.out.println("Dann geben Sie bitte D ein.");
             System.out.println();
-            System.out.println(2 + ". Wollen sie eigebnen was sie gegessen haben, in Kalorien?");
-            System.out.println("Dann geben sie bitte K ein.");
+            System.out.println(2 + ". Wollen Sie eingeben, was Sie gegessen haben, in Kalorien?");
+            System.out.println("Dann geben Sie bitte K ein.");
 
-            System.out.println("Um das Programm zu beneden gebe sie bitte A ein.");
-            System.out.println("Was wollen sie machen? Geben sie bitte die dem entsprechedne Taste ein:");
+            System.out.println("Um das Programm zu beenden, geben Sie bitte A ein.");
+            System.out.println("Was wollen Sie machen? Geben Sie bitte die dementsprechende Taste ein:");
             String taste = scanner.next();
 
             if (taste.equalsIgnoreCase(d)) {
-                // Ruft die Mehtode auf in der man die Körperdaten eingebenkann und die die
-                // Kalorienanzahl berechent wie viele man essen darf un beies speichert.
+                // Ruft die Methode auf, in der man die Körperdaten eingeben kann und die die
+                // Kalorienanzahl berechnet, wie viele man essen darf, und beides speichert.
             }
             if (taste.equalsIgnoreCase(k)) {
-                // Ruft die Mehtode auf in der man die zusich genommenen Kalorien eintragen kann
-                // und der noch freie Betrag zurückgegeben würd.
+                // Ruft die Methode auf, in der man die zu sich genommenen Kalorien eintragen
+                // kann
+                // und der noch freie Betrag zurückgegeben wird.
                 nochFreieKalorien = kalorieneingabe();
                 if (nochFreieKalorien <= 0) {
-                    System.out.println("Achtung! Sie haben ihr heutige Kalorihenhöchstgenze erreicht.");
+                    System.out.println("Achtung! Sie haben Ihre heutige Kalorienhöchstgrenze erreicht.");
                 } else {
                     System.out.println("Sie dürfen noch " + nochFreieKalorien
-                            + "Kalorien zu sich nehmen. Befohr sie ihre heutige höstmenge erreichen.");
+                            + " Kalorien zu sich nehmen, bevor Sie Ihre heutige Höchstmenge erreichen.");
                 }
             }
             if (taste.equalsIgnoreCase(a)) {
                 abruch = true;
             }
         }
-        System.out.print("CalSip wurde bendet. Wir wünschen noch einen schönnen und bleiben sie gesund.");
+        System.out.print("CalSip wurde beendet. Wir wünschen noch einen schönen Tag und bleiben Sie gesund.");
 
         scanner.close();
     }
