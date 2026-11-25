@@ -5,7 +5,7 @@ public class CalSip {
         System.out.println("Hallo und Wilkommen bei CalSip!");
     }
 
-    public static int wasserbedarfProTag(){
+    public static double wasserbedarfProTag(){
 
         Scanner scanner = new Scanner(System.in);
         System.out.println("Geben sie ihr Körpergewicht in Kilogramm ein: ");
@@ -20,7 +20,8 @@ public class CalSip {
         double wasserbedarfInLitern = körpergewichtInKilogramm * 0.0325; // 0.0325 Liter pro Kilogramm ist ein Richtwert von der "Techniker Krankenkasse"
         //Berechnung erfolg mit Double, da mit Kommazahlen gearbeitet wird.
 
-        return 0;
+        System.out.println("Der Wasserbedarf pro Tag (in Litern) beträgt für sie: ");
+        return wasserbedarfInLitern; //Rückgabewert des Wasserbedarfs in der Konsole mit vorherigem Statement zur Zuordnung
         
     }
 }
