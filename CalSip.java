@@ -22,7 +22,7 @@ public class CalSip {
 
             System.out.println("Um das Programm zu beneden gebe sie bitte A ein.");
             System.out.println("Was wollen sie machen? Geben sie bitte die dem entsprechedne Taste ein:");
-            String taste = scanner.next(); //Test
+            String taste = scanner.next(); //Test2
         
         
         
