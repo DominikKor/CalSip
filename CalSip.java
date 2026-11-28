@@ -1,12 +1,11 @@
 import java.util.Scanner;
-
 public class CalSip {
     public static int kalorientagesgenze;
     public static int nochFreieKalorien;
-
     public static void main(String[] args) {
-
-        System.out.println("Hallo und Willkommen bei CalSip!");
+        
+        
+        System.out.println("Hallo und Wilkommen bei CalSip!");
         Scanner scanner = new Scanner(System.in);
         String d = "D";
         String k = "k";
